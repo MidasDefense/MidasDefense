@@ -1,0 +1,601 @@
+/.*	--	u:r:unknown.miscfile
+/.*	-d	u:r:unknown.miscfile
+/.*	-c	u:r:unknown.miscfile
+/.*	-b	u:r:unknown.miscfile
+/.*	-s	u:r:unknown.miscfile
+/.*	-p	u:r:unknown.miscfile
+/.*	-l	u:r:sys.rootfile
+/mnt(/.*)?/lost\+found	-d	u:r:lostfound.miscfile
+/mnt(/.*)?/lost\+found/.*	<<none>>
+/dev/.*	<<none>>
+/etc/.*	u:r:file.conffile
+/mnt/.*	<<none>>
+/rwm/.*	u:r:overlay.miscfile
+/sys/.*	<<none>>
+/tmp/.*	<<none>>
+/usr/.*	u:r:file.datafile
+/www/.*	u:r:www.miscfile
+/boot/.*	u:r:dos.fs
+/home/.*	u:r:file.homefile
+/proc/.*	<<none>>
+/root/.*	u:r:file.homefile
+/dev/hd[^/]+	-b	u:r:hd.stordev
+/dev/sd[^/]+	-b	u:r:sd.stordev
+/dev/vd[^/]+	-b	u:r:vd.stordev
+/dev/sr[0-9]+	-b	u:r:sr.stordev
+/dev/fb([0-9]+)?	-c	u:r:framebuf.nodedev
+/dev/tty.+	-c	u:r:dev.ttydev
+/dev/vcs[^/]*	-c	u:r:dev.ttydev
+/dev/mtd[0-9]+	-c	u:r:mtd.stordev
+/dev/dm-[0-9]+	-b	u:r:dm.stordev
+/dev/pts(/.*)?	<<none>>
+/dev/mtd[0-9]+ro	-c	u:r:mtd.stordev
+/dev/cpu([0-9]+)?	-c	u:r:cpu.nodedev
+/dev/msr([0-9]+)?	-c	u:r:cpu.nodedev
+/dev/rtc([0-9]+)?	-c	u:r:clock.nodedev
+/dev/usb([0-9]+)?	-c	u:r:usb.nodedev
+/dev/ubi[0-9]+_[0-9]+	-c	u:r:mtd.stordev
+/dev/bsg/.+	-c	u:r:bsg.stordev
+/dev/cpu/.+	-c	u:r:cpu.nodedev
+/dev/dri/.+	-c	u:r:dri.nodedev
+/dev/raw/.+	-c	u:r:raw.stordev
+/dev/loop.+	-b	u:r:loop.stordev
+/etc/ppp/.*	u:r:pppd.conffile
+/etc/sqm/.*	u:r:sqm.conffile
+/etc/ssl/.*	u:r:ssl.certfile
+/overlay/.*	u:r:overlay.miscfile
+/tmp/etc/.*	u:r:tmpfile.conftmpfile
+/tmp/lib/.*	u:r:tmpfile.statetmpfile
+/tmp/log/.*	u:r:tmpfile.logtmpfile
+/tmp/run/.*	u:r:tmpfile.runtimetmpfile
+/tmp/usr/.*	u:r:tmpfile.statetmpfile
+/usr/bin/.*	u:r:file.execfile
+/usr/lib/.*	u:r:file.libfile
+/dev/i2c-[0-9]+	-c	u:r:i2c.nodedev
+/dev/nvme[0-9]+	-c	u:r:nvme.stordev
+/dev/zram[0-9]+	-b	u:r:zram.stordev
+/dev/nvme[0-9]n[^/]+	-b	u:r:nvme.stordev
+/tmp/\.uci/.*	-d	u:r:uci.tmpfile
+/etc/acme/.*	u:r:acme.conffile
+/etc/opkg/.*	u:r:opkg.conffile
+/tmp/lock/.*	u:r:tmpfile.locktmpfile
+/etc/squid/.*	u:r:squid.conffile
+/tmp/hosts/.*	u:r:tmpfile.hoststmpfile
+/tmp/spool/.*	u:r:tmpfile.spooltmpfile
+/tmp/squid/.*	u:r:squid.tmpfile
+/tmp/state/.*	u:r:tmpfile.statetmpfile
+/dev/mmcblk[0-9]+	-b	u:r:mmc.stordev
+/dev/mmcblk[0-9]+rpmb	-c	u:r:mmc.stordev
+/dev/mmcblk[0-9]+p[0-9]+	-b	u:r:mmc.stordev
+/dev/mmcblk[0-9]+boot[0-9]+	-b	u:r:mmc.stordev
+/etc/chrony/.*	u:r:chrony.conffile
+/etc/config/.*	u:r:uci.conffile
+/etc/init\.d/.*	u:r:file.initscriptfile
+/etc/ngircd/.*	u:r:ngircd.conffile
+/lost\+found/.*	<<none>>
+/tmp/syscfg/.*	u:r:syscfg.miscfile
+/dev/bus/usb/.+	-c	u:r:usb.nodedev
+/tmp/wpa_ctrl.*	-s	u:r:wpad.tmpfile
+/etc/board\.d/.*	u:r:boarddetect.conffile
+/etc/selinux/.*	u:r:selinux.conffile
+/etc/umurmur/.*	u:r:murmur.certfile
+/etc/unbound/.*	u:r:unbound.conffile
+/tmp/overlay/.*	u:r:overlay.miscfile
+/tmp/run/sqm/.*	u:r:sqm.runtimetmpfile
+/tmp/sysinfo/.*	u:r:preinit.tmpfile
+/www/cgi-bin/.*	u:r:file.cgiscriptfile
+/tmp/run/ppp-.*\.pid	--	u:r:pppd.runtimetmpfile
+/dev/mtdblock[0-9]+	-b	u:r:mtd.stordev
+/dev/gpiochip([0-9]+)?	-c	u:r:gpio.nodedev
+/dev/watchdog([0-9]+)?	-c	u:r:watchdog.nodedev
+/dev/ubiblock[0-9]+_[0-9]+	-b	u:r:mtd.stordev
+/etc/selinux/([^/]*/)?policy	-d	u:r:selinux.secfile
+/etc/selinux/([^/]*/)?contexts	-d	u:r:selinux.defaultcontext.conffile
+/etc/selinux/([^/]*/)?policy/.*	u:r:selinux.secfile
+/dev/ubiblock[0-9]+_[0-9]+p[0-9]+	-b	u:r:mtd.stordev
+/etc/selinux/([^/]*/)?contexts/.*	u:r:selinux.defaultcontext.conffile
+/etc/selinux/([^/]*/)?contexts/files	-d	u:r:selinux.filecontext.conffile
+/etc/selinux/([^/]*/)?contexts/files/.*	u:r:selinux.filecontext.conffile
+/etc/ttyd\.crt\..*	--	u:r:ttyd.certfile
+/etc/ttyd\.key\..*	--	u:r:ttyd.certfile
+/usr/bin/fsck\..*	--	u:r:fsck.execfile
+/etc/crontabs/.*	u:r:cron.miscfile
+/etc/dropbear/.*	u:r:dropbear.certfile
+/etc/iproute2/.*	u:r:iproute2.conffile
+/etc/sysctl\.d/.*	u:r:sysctl.conffile
+/tmp/dropbear/.*	u:r:dropbear.certfile
+/tmp/run/rpcd/.*	u:r:rpcd.runtimetmpfile
+/tmp/run/ubus/.*	u:r:ubusd.runtimetmpfile
+/usr/lib/opkg/.*	u:r:opkg.miscfile
+/usr/lib/pppd/.*	u:r:pppd.miscfile
+/usr/lib/wifi/.*	u:r:wifi.miscfile
+/tmp/run/wifi-.*\.pid	--	u:r:netifd.runtimetmpfile
+/tmp/run/iwinfo.*	-s	u:r:rpcd.runtimetmpfile
+/etc/hotplug\.d/.*	u:r:hotplug.conffile
+/etc/modules\.d/.*	u:r:kmodloader.conffile
+/etc/tinyproxy/.*	u:r:tinyproxy.conffile
+/tmp/dnsmasq\.d/.*	u:r:dnsmasq.tmpfile
+/tmp/root/work/.*	u:r:overlay.miscfile
+/tmp/run/netns/.*	<<none>>
+/tmp/wireguard/.*	u:r:wireguard.tmpfile
+/usr/share/fw3/.*	u:r:fw3.datafile
+/tmp/run/pppoe-.*\.pid	--	u:r:pppd.runtimetmpfile
+/dev/iio:device[0-9]+	-c	u:r:iio.nodedev
+/sys/fs/selinux(/.*)?	<<none>>
+/etc/ngircd\.pem\..*	--	u:r:ngircd.certfile
+/etc/uhttpd\.crt\..*	--	u:r:uhttpd.certfile
+/etc/uhttpd\.key\..*	--	u:r:uhttpd.certfile
+/tmp/etc/uhttpd/.*	u:r:uhttpd.conftmpfile
+/tmp/lib/odhcpd/.*	u:r:odhcpd.statetmpfile
+/tmp/opkg-lists/.*	u:r:opkg.tmpfile
+/tmp/run/blockd/.*	<<none>>
+/tmp/run/chrony/.*	u:r:chrony.runtimetmpfile
+/tmp/spool/cron/.*	u:r:cron.miscfile
+/usr/lib/config/.*	u:r:functions.miscfile
+/usr/lib/netifd/.*	u:r:netifd.miscfile
+/usr/share/luci/.*	u:r:luci.datafile
+/usr/share/rpcd/.*	u:r:rpcd.datafile
+/tmp/run/udhcpc-.*\.pid	--	u:r:netifd.runtimetmpfile
+/etc/ngircd\.conf\..*	--	u:r:ngircd.conffile
+/etc/ngircd\.motd\..*	--	u:r:ngircd.conffile
+/etc/udhcpc\.user\..*	--	u:r:netifd.conffile
+/tmp/lib/unbound/.*	u:r:unbound.statetmpfile
+/tmp/run/dnsmasq/.*	u:r:dnsmasq.runtimetmpfile
+/tmp/run/hostapd/.*	u:r:wpad.runtimetmpfile
+/usr/lib/dnsmasq/.*	u:r:dnsmasq.miscfile
+/usr/lib/modules/.*	u:r:file.modulesfile
+/usr/lib/network/.*	u:r:network.miscfile
+/usr/lib/preinit/.*	u:r:preinit.miscfile
+/usr/lib/unbound/.*	u:r:unbound.miscfile
+/usr/lib/upgrade/.*	u:r:upgrade.miscfile
+/usr/share/acl\.d/.*	u:r:acl.datafile
+/tmp/run/hostapd-.*\.psk	--	u:r:netifd.runtimetmpfile
+/tmp/run/hostapd-.*\.conf	--	u:r:netifd.runtimetmpfile
+/tmp/run/hostapd-.*\.vlan	--	u:r:netifd.runtimetmpfile
+/tmp/run/logread\.[0-9]+\.pid	--	u:r:logread.runtimetmpfile
+/etc/odhcp6c\.user\..*	--	u:r:odhcp6c.conffile
+/etc/umurmur\.conf\..*	--	u:r:murmur.conffile
+/etc/capabilities/.*	u:r:capabilities.conffile
+/etc/luci-uploads/.*	u:r:luci.conffile
+/etc/uci-defaults/.*	u:r:uci.defaults.conffile
+/tmp/etc/chrony\.d/.*	u:r:chrony.conftmpfile
+/tmp/lib/luci-bwc/.*	u:r:luci.bwc.statetmpfile
+/tmp/usr/lib/opkg/.*	u:r:opkg.statetmpfile
+/usr/lib/firmware/.*	u:r:firmware.miscfile
+/usr/share/udhcpc/.*	u:r:udhcpc.datafile
+/tmp/run/dropbear\.[0-9]+\.pid	--	u:r:dropbear.runtimetmpfile
+/etc/fw_env\.config\..*	--	u:r:fwenv.conffile
+/etc/udhcpc\.user\.d/.*	u:r:netifd.conffile
+/tmp/resolv\.conf\,d/.*	u:r:resolv.tmpfile
+/usr/lib/functions/.*	u:r:functions.miscfile
+/usr/share/dnsmasq/.*	u:r:dnsmasq.datafile
+/usr/share/libubox/.*	u:r:libubox.datafile
+/etc/modules-boot\.d/.*	u:r:kmodloader.conffile
+/etc/odhcp6c\.user\.d/.*	u:r:odhcp6c.conffile
+/etc/squid/ssl_cert/.*	u:r:squid.certfile
+/overlay/lost\+found/.*	<<none>>
+/tmp/run/irqbalance/.*	u:r:irqbalance.runtimetmpfile
+/usr/share/terminfo/.*	u:r:terminfo.datafile
+/usr/share/zoneinfo/.*	u:r:locale.miscfile
+/tmp/luci-indexcache\..*	--	u:r:luci.tmpfile
+/etc/ngircd/keyfiles/.*	u:r:ngircd.keyfiles.conffile
+/tmp/run/chrony-dhcp/.*	u:r:chrony.runtimetmpfile
+/usr/share/libiwinfo/.*	u:r:libiwinfo.datafile
+/usr/share/tinyproxy/.*	u:r:tinyproxy.datafile
+/tmp/log/umurmurd\.log\..*	--	u:r:murmur.logtmpfile
+/tmp/tinyproxy\.shared\..*	--	u:r:tinyproxy.tmpfile
+/tmp/luci-modulecache/.*	u:r:luci.tmpfile
+/tmp/run/config\.check/.*	u:r:reloadconfig.runtimetmpfile
+/tmp/log/tinyproxy\.log\..*	--	u:r:tinyproxy.logtmpfile
+/tmp/etc/tinyproxy\.conf\..*	--	u:r:tinyproxy.conftmpfile
+/tmp/run/wpa_supplicant/.*	u:r:wpad.runtimetmpfile
+/tmp/unbound_odhcpd\.lock\..*	--	u:r:unbound.tmpfile
+/	-d	u:r:sys.rootfile
+/dev	-d	u:r:tmp.fs
+/etc	-d	u:r:file.conffile
+/mnt	-d	u:r:mnt.miscfile
+/rwm	-d	u:r:overlay.miscfile
+/sys	-d	u:r:sys.fs
+/tmp	-d	u:r:tmp.fs
+/usr	-d	u:r:file.datafile
+/www	-d	u:r:www.miscfile
+/boot	-d	u:r:dos.fs
+/home	-d	u:r:file.homefile
+/proc	-d	u:r:proc.fs
+/root	-d	u:r:file.homefile
+/tmp/TZ	--	u:r:locale.miscfile
+/etc/ppp	-d	u:r:pppd.conffile
+/etc/sqm	-d	u:r:sqm.conffile
+/etc/ssl	-d	u:r:ssl.certfile
+/overlay	-d	u:r:overlay.miscfile
+/tmp/etc	-d	u:r:tmpfile.conftmpfile
+/tmp/lib	-d	u:r:tmpfile.statetmpfile
+/tmp/log	-d	u:r:tmpfile.logtmpfile
+/tmp/run	-d	u:r:tmpfile.runtimetmpfile
+/tmp/usr	-d	u:r:tmpfile.statetmpfile
+/usr/bin	-d	u:r:file.execfile
+/usr/lib	-d	u:r:file.libfile
+/dev/mem	-c	u:r:mem.nodedev
+/dev/ppp	-c	u:r:ppp.nodedev
+/dev/tty	-c	u:r:tty.nodedev
+/dev/log	-s	u:r:logd.miscfile
+/etc/acme	-d	u:r:acme.conffile
+/etc/opkg	-d	u:r:opkg.conffile
+/tmp/\.uci	-d	u:r:uci.tmpfile
+/tmp/lock	-d	u:r:tmpfile.locktmpfile
+/dev/full	-c	u:r:null.nodedev
+/dev/fuse	-c	u:r:fuse.stordev
+/dev/hpet	-c	u:r:clock.nodedev
+/dev/kmem	-c	u:r:mem.nodedev
+/dev/kmsg	-c	u:r:kmsg.nodedev
+/dev/null	-c	u:r:null.nodedev
+/dev/port	-c	u:r:mem.nodedev
+/dev/ptmx	-c	u:r:ptmx.nodedev
+/dev/vmci	-c	u:r:vmci.nodedev
+/dev/zero	-c	u:r:zero.nodedev
+/etc/fstab	--	u:r:fstab.conffile
+/etc/group	--	u:r:nameservice.miscfile
+/etc/hosts	--	u:r:nameservice.miscfile
+/root/test	--	u:r:untrusted.execfile
+/etc/squid	-d	u:r:squid.conffile
+/tmp/hosts	-d	u:r:tmpfile.hoststmpfile
+/tmp/spool	-d	u:r:tmpfile.spooltmpfile
+/tmp/squid	-d	u:r:squid.tmpfile
+/tmp/state	-d	u:r:tmpfile.statetmpfile
+/dev/hwrng	-c	u:r:random.nodedev
+/dev/nvram	-c	u:r:nvram.nodedev
+/dev/vsock	-c	u:r:vmci.nodedev
+/\.wget-hsts	--	u:r:wget.miscfile
+/etc/banner	--	u:r:banner.conffile
+/etc/ethers	--	u:r:nameservice.miscfile
+/etc/group~	--	u:r:nameservice.miscfile
+/etc/passwd	--	u:r:nameservice.miscfile
+/etc/shadow	--	u:r:shadow.authfile
+/etc/shells	--	u:r:shells.conffile
+/etc/shinit	--	u:r:profile.conffile
+/root/test1	--	u:r:originalwgetnormal.execfile
+/usr/bin/iw	--	u:r:iw.execfile
+/usr/bin/tc	--	u:r:ip.execfile
+/usr/bin/wg	--	u:r:wireguard.execfile
+/etc/chrony	-d	u:r:chrony.conffile
+/etc/config	-d	u:r:uci.conffile
+/etc/init\.d	-d	u:r:file.initscriptfile
+/etc/ngircd	-d	u:r:ngircd.conffile
+/lost\+found	-d	u:r:lostfound.miscfile
+/tmp/syscfg	-d	u:r:syscfg.miscfile
+/dev/autofs	-c	u:r:autofs.nodedev
+/dev/random	-c	u:r:random.nodedev
+/etc/diag\.sh	--	u:r:preinit.miscfile
+/etc/inittab	--	u:r:inittab.conffile
+/etc/passwd~	--	u:r:nameservice.miscfile
+/etc/preinit	--	u:r:preinit.execfile
+/etc/profile	--	u:r:profile.conffile
+/etc/shadow~	--	u:r:shadow.authfile
+/usr/bin/fw3	--	u:r:fw3.execfile
+/usr/bin/mtd	--	u:r:mtd.execfile
+/usr/bin/uci	--	u:r:uci.execfile
+/etc/board\.d	-d	u:r:boarddetect.conffile
+/etc/selinux	-d	u:r:selinux.conffile
+/etc/umurmur	-d	u:r:murmur.certfile
+/etc/unbound	-d	u:r:unbound.conffile
+/tmp/overlay	-d	u:r:overlay.miscfile
+/tmp/run/sqm	-d	u:r:sqm.runtimetmpfile
+/tmp/sysinfo	-d	u:r:preinit.tmpfile
+/www/cgi-bin	-d	u:r:file.cgiscriptfile
+/dev/console	-c	u:r:console.ttydev
+/dev/urandom	-c	u:r:random.nodedev
+/etc/rc\.local	--	u:r:rclocal.conffile
+/etc/services	--	u:r:nameservice.miscfile
+/etc/ttyd\.crt	--	u:r:ttyd.certfile
+/etc/ttyd\.key	--	u:r:ttyd.certfile
+/tmp/log/wtmp	--	u:r:wtmp.logtmpfile
+/tmp/opkg\.err	--	u:r:opkg.tmpfile
+/tmp/opkg\.out	--	u:r:opkg.tmpfile
+/usr/bin/bash	--	u:r:shell.execfile
+/usr/bin/ifup	--	u:r:ifup.execfile
+/usr/bin/jshn	--	u:r:jshn.execfile
+/usr/bin/logd	--	u:r:logd.execfile
+/usr/bin/opkg	--	u:r:opkg.execfile
+/usr/bin/pppd	--	u:r:pppd.execfile
+/usr/bin/px5g	--	u:r:px5g.execfile
+/usr/bin/rpcd	--	u:r:rpcd.execfile
+/usr/bin/tcsh	--	u:r:shell.execfile
+/usr/bin/ttyd	--	u:r:ttyd.execfile
+/usr/bin/ubus	--	u:r:ubus.execfile
+/usr/bin/wifi	--	u:r:wifi.execfile
+/usr/bin/wpad	--	u:r:wpad.execfile
+/etc/crontabs	-d	u:r:cron.miscfile
+/etc/dropbear	-d	u:r:dropbear.certfile
+/etc/iproute2	-d	u:r:iproute2.conffile
+/etc/sysctl\.d	-d	u:r:sysctl.conffile
+/tmp/dropbear	-d	u:r:dropbear.certfile
+/tmp/run/rpcd	-d	u:r:rpcd.runtimetmpfile
+/tmp/run/ubus	-d	u:r:ubusd.runtimetmpfile
+/usr/lib/opkg	-d	u:r:opkg.miscfile
+/usr/lib/pppd	-d	u:r:pppd.miscfile
+/usr/lib/wifi	-d	u:r:wifi.miscfile
+/dev/pts/ptmx	-c	<<none>>
+/dev/ubi_ctrl	-c	u:r:mtd.stordev
+/usr/bin/wget	-l	u:r:newwget.execfile
+/etc/opkg\.conf	--	u:r:opkg.conffile
+/etc/protocols	--	u:r:nameservice.miscfile
+/etc/rc\.common	--	u:r:rccommon.conffile
+/tmp/\.failsafe	--	u:r:rcboot.tmpfile
+/tmp/opkg\.lock	--	u:r:opkg.tmpfile
+/usr/bin/block	--	u:r:blockmount.execfile
+/usr/bin/fdisk	--	u:r:gptfdisk.execfile
+/usr/bin/gdisk	--	u:r:gptfdisk.execfile
+/usr/bin/lsusb	--	u:r:usbutil.execfile
+/usr/bin/partx	--	u:r:gptfdisk.execfile
+/usr/bin/socat	--	u:r:socat.execfile
+/usr/bin/squid	--	u:r:squid.execfile
+/usr/bin/test2	--	u:r:originalwgetnormal.execfile
+/usr/bin/ubusd	--	u:r:ubusd.execfile
+/usr/bin/urngd	--	u:r:urngd.execfile
+/etc/hotplug\.d	-d	u:r:hotplug.conffile
+/etc/modules\.d	-d	u:r:kmodloader.conffile
+/etc/tinyproxy	-d	u:r:tinyproxy.conffile
+/tmp/dnsmasq\.d	-d	u:r:dnsmasq.tmpfile
+/tmp/root/work	-d	u:r:overlay.miscfile
+/tmp/run/netns	-d	u:r:ip.runtimetmpfile
+/tmp/wireguard	-d	u:r:wireguard.tmpfile
+/usr/share/fw3	-d	u:r:fw3.datafile
+/dev/hw_random	-c	u:r:random.nodedev
+/tmp/localtime	-l	u:r:locale.miscfile
+/etc/board\.json	--	u:r:board.miscfile
+/etc/init\.d/led	--	u:r:rcled.initscriptfile
+/etc/init\.d/log	--	u:r:rclog.initscriptfile
+/etc/init\.d/sqm	--	u:r:rcsqm.initscriptfile
+/etc/login\.defs	--	u:r:logindefs.conffile
+/etc/ngircd\.pem	--	u:r:ngircd.certfile
+/etc/uhttpd\.crt	--	u:r:uhttpd.certfile
+/etc/uhttpd\.key	--	u:r:uhttpd.certfile
+/tmp/board\.json	--	u:r:board.miscfile
+/usr/bin/blockd	--	u:r:blockd.execfile
+/usr/bin/bridge	--	u:r:ip.execfile
+/usr/bin/cfdisk	--	u:r:gptfdisk.execfile
+/usr/bin/cgdisk	--	u:r:gptfdisk.execfile
+/usr/bin/cgi-io	--	u:r:cgiio.cgiscriptfile
+/usr/bin/lua5\.1	--	u:r:lua.execfile
+/usr/bin/mke2fs	--	u:r:mke2fs.execfile
+/usr/bin/netifd	--	u:r:netifd.execfile
+/usr/bin/ngircd	--	u:r:ngircd.execfile
+/usr/bin/odhcpd	--	u:r:odhcpd.execfile
+/usr/bin/sfdisk	--	u:r:gptfdisk.execfile
+/usr/bin/sgdisk	--	u:r:gptfdisk.execfile
+/usr/bin/ubinfo	--	u:r:ubiutil.execfile
+/usr/bin/uhttpd	--	u:r:uhttpd.execfile
+/tmp/etc/uhttpd	-d	u:r:uhttpd.conftmpfile
+/tmp/lib/odhcpd	-d	u:r:odhcpd.statetmpfile
+/tmp/opkg-lists	-d	u:r:opkg.tmpfile
+/tmp/run/blockd	-d	<<none>>
+/tmp/run/chrony	-d	u:r:chrony.runtimetmpfile
+/tmp/spool/cron	-d	u:r:cron.miscfile
+/usr/lib/config	-d	u:r:functions.miscfile
+/usr/lib/netifd	-d	u:r:netifd.miscfile
+/usr/share/luci	-d	u:r:luci.datafile
+/usr/share/rpcd	-d	u:r:rpcd.datafile
+/etc/e2fsck\.conf	--	u:r:mke2fs.conffile
+/etc/init\.d/acme	--	u:r:rcacme.initscriptfile
+/etc/init\.d/boot	--	u:r:rcboot.initscriptfile
+/etc/init\.d/cron	--	u:r:rccron.initscriptfile
+/etc/init\.d/rpcd	--	u:r:rcrpcd.initscriptfile
+/etc/init\.d/ttyd	--	u:r:rcttyd.initscriptfile
+/etc/init\.d/wpad	--	u:r:rcwpad.initscriptfile
+/etc/init\.d/zram	--	u:r:rczram.initscriptfile
+/etc/ngircd\.conf	--	u:r:ngircd.conffile
+/etc/ngircd\.motd	--	u:r:ngircd.conffile
+/etc/sysctl\.conf	--	u:r:sysctl.conffile
+/etc/udhcpc\.user	--	u:r:netifd.conffile
+/root/helloworld	--	u:r:helloworld.execfile
+/tmp/dhcp\.leases	--	u:r:dnsmasq.tmpfile
+/tmp/log/lastlog	--	u:r:lastlog.logtmpfile
+/tmp/resolv\.conf	--	u:r:resolv.tmpfile
+/usr/bin/addpart	--	u:r:gptfdisk.execfile
+/usr/bin/busybox	--	u:r:shell.execfile
+/usr/bin/chronyc	--	u:r:chronyc.execfile
+/usr/bin/chronyd	--	u:r:chronyd.execfile
+/usr/bin/delpart	--	u:r:gptfdisk.execfile
+/usr/bin/devlink	--	u:r:ip.execfile
+/usr/bin/dnsmasq	--	u:r:dnsmasq.execfile
+/usr/bin/hostapd	--	u:r:wpad.execfile
+/usr/bin/ip-full	--	u:r:ip.execfile
+/usr/bin/ip-tiny	--	u:r:ip.execfile
+/usr/bin/logread	--	u:r:logread.execfile
+/usr/bin/odhcp6c	--	u:r:odhcp6c.execfile
+/usr/bin/openssl	--	u:r:openssl.execfile
+/usr/bin/tcpdump	--	u:r:tcpdump.execfile
+/usr/bin/ubinize	--	u:r:ubiutil.execfile
+/usr/bin/unbound	--	u:r:unbound.execfile
+/tmp/lib/unbound	-d	u:r:unbound.statetmpfile
+/tmp/run/dnsmasq	-d	u:r:dnsmasq.runtimetmpfile
+/tmp/run/hostapd	-d	u:r:wpad.runtimetmpfile
+/usr/lib/dnsmasq	-d	u:r:dnsmasq.miscfile
+/usr/lib/modules	-d	u:r:file.modulesfile
+/usr/lib/network	-d	u:r:network.miscfile
+/usr/lib/preinit	-d	u:r:preinit.miscfile
+/usr/lib/unbound	-d	u:r:unbound.miscfile
+/usr/lib/upgrade	-d	u:r:upgrade.miscfile
+/usr/share/acl\.d	-d	u:r:acl.datafile
+/etc/dnsmasq\.conf	--	u:r:dnsmasq.conffile
+/etc/hotplug\.json	--	u:r:hotplug.conffile
+/etc/init\.d/fstab	--	u:r:rcfstab.initscriptfile
+/etc/init\.d/socat	--	u:r:rcsocat.initscriptfile
+/etc/init\.d/squid	--	u:r:rcsquid.initscriptfile
+/etc/init\.d/urngd	--	u:r:rcurngd.initscriptfile
+/etc/odhcp6c\.user	--	u:r:odhcp6c.conffile
+/etc/umurmur\.conf	--	u:r:murmur.conffile
+/etc/urandom\.seed	--	u:r:urandomseed.miscfile
+/tmp/hosts/odhcpd	--	u:r:odhcpd.hoststmpfile
+/tmp/run/fw3\.lock	--	u:r:fw3.runtimetmpfile
+/tmp/run/ntpd\.pid	--	u:r:ntpd.runtimetmpfile
+/usr/bin/dropbear	--	u:r:dropbear.execfile
+/usr/bin/fixparts	--	u:r:gptfdisk.execfile
+/usr/bin/ifstatus	--	u:r:ifstatus.execfile
+/usr/bin/login\.sh	--	u:r:login.execfile
+/usr/bin/luci-bwc	--	u:r:luci.bwc.execfile
+/usr/bin/opkg-key	--	u:r:opkg.key.execfile
+/usr/bin/swconfig	--	u:r:swconfig.execfile
+/usr/bin/ubiblock	--	u:r:ubiutil.execfile
+/usr/bin/ubicrc32	--	u:r:ubiutil.execfile
+/usr/bin/ubimkvol	--	u:r:ubiutil.execfile
+/usr/bin/ubirmvol	--	u:r:ubiutil.execfile
+/usr/bin/ubirsvol	--	u:r:ubiutil.execfile
+/usr/bin/umurmurd	--	u:r:murmur.execfile
+/usr/bin/usbreset	--	u:r:usbutil.execfile
+/usr/bin/wget-ssl	--	u:r:wget.execfile
+/www/cgi-bin/luci	--	u:r:luci.cgi.cgiscriptfile
+/etc/capabilities	-d	u:r:capabilities.conffile
+/etc/luci-uploads	-d	u:r:luci.conffile
+/etc/uci-defaults	-d	u:r:uci.defaults.conffile
+/tmp/etc/chrony\.d	-d	u:r:chrony.conftmpfile
+/tmp/lib/luci-bwc	-d	u:r:luci.bwc.statetmpfile
+/tmp/usr/lib/opkg	-d	u:r:opkg.statetmpfile
+/usr/lib/firmware	-d	u:r:firmware.miscfile
+/usr/share/udhcpc	-d	u:r:udhcpc.datafile
+/dev/loop-control	-c	u:r:loopctl.nodedev
+/etc/firewall\.user	--	u:r:firewall.conffile
+/etc/fw_env\.config	--	u:r:fwenv.conffile
+/etc/init\.d/blockd	--	u:r:rcblockd.initscriptfile
+/etc/init\.d/ngircd	--	u:r:rcngircd.initscriptfile
+/etc/init\.d/odhcpd	--	u:r:rcodhcpd.initscriptfile
+/etc/init\.d/sysctl	--	u:r:rcsysctl.initscriptfile
+/etc/init\.d/system	--	u:r:rcsystem.initscriptfile
+/etc/init\.d/uhttpd	--	u:r:rcuhttpd.initscriptfile
+/etc/init\.d/umount	--	u:r:rcumount.initscriptfile
+/tmp/\.switch_jffs2	--	u:r:mountroot.tmpfile
+/tmp/run/acme_boot	--	u:r:acme.runtimetmpfile
+/tmp/run/crond\.pid	--	u:r:cron.runtimetmpfile
+/tmp/run/fw3\.state	--	u:r:fw3.runtimetmpfile
+/tmp/run/led\.state	--	u:r:rcled.runtimetmpfile
+/tmp/run/squid\.pid	--	u:r:squid.runtimetmpfile
+/tmp/state/network	--	u:r:uci.statetmpfile
+/usr/bin/devstatus	--	u:r:devstatus.execfile
+/usr/bin/firstboot	--	u:r:firstboot.execfile
+/usr/bin/getrandom	--	u:r:getrandom.execfile
+/usr/bin/igmpproxy	--	u:r:igmpproxy.execfile
+/usr/bin/ipcalc\.sh	--	u:r:ipcalc.execfile
+/usr/bin/mkfs\.f2fs	--	u:r:mkfsf2fs.execfile
+/usr/bin/opkg-call	--	u:r:opkg.call.execfile
+/usr/bin/rpcd/luci	--	u:r:luci.execfile
+/usr/bin/tinyproxy	--	u:r:tinyproxy.execfile
+/usr/bin/ubiattach	--	u:r:ubiutil.execfile
+/usr/bin/ubidetach	--	u:r:ubiutil.execfile
+/usr/bin/ubiformat	--	u:r:ubiutil.execfile
+/usr/bin/ubirename	--	u:r:ubiutil.execfile
+/etc/udhcpc\.user\.d	-d	u:r:netifd.conffile
+/tmp/resolv\.conf\.d	-d	u:r:resolv.tmpfile
+/usr/lib/functions	-d	u:r:functions.miscfile
+/usr/share/dnsmasq	-d	u:r:dnsmasq.datafile
+/usr/share/libubox	-d	u:r:libubox.datafile
+/dev/btrfs-control	-c	u:r:dmctl.nodedev
+/tmp/run/ttyd\.sock	-s	u:r:ttyd.runtimetmpfile
+/tmp/run/ubus\.sock	-s	u:r:ubusd.runtimetmpfile
+/etc/init\.d/chronyd	--	u:r:rcchronyd.initscriptfile
+/etc/init\.d/dnsmasq	--	u:r:rcdnsmasq.initscriptfile
+/etc/init\.d/network	--	u:r:rcnetwork.initscriptfile
+/etc/init\.d/sysntpd	--	u:r:rcsysntpd.initscriptfile
+/etc/init\.d/umurmur	--	u:r:rcmurmur.initscriptfile
+/etc/init\.d/unbound	--	u:r:rcunbound.initscriptfile
+/tmp/log/system\.log	--	u:r:logread.logtmpfile
+/tmp/run/config\.md5	--	u:r:reloadconfig.runtimetmpfile
+/tmp/state/wireless	--	u:r:uci.statetmpfile
+/tmp/sysupgrade\.tar	--	u:r:mountroot.tmpfile
+/usr/bin/irqbalance	--	u:r:irqbalance.execfile
+/usr/bin/jffs2reset	--	u:r:firstboot.execfile
+/usr/bin/jsonfilter	--	u:r:jsonfilter.execfile
+/usr/bin/kmodloader	--	u:r:kmodloader.execfile
+/usr/bin/mount_root	--	u:r:mountroot.execfile
+/usr/bin/sysupgrade	--	u:r:sysupgrade.execfile
+/usr/lib/os-release	--	u:r:osrelease.miscfile
+/usr/lib/sqm/run\.sh	--	u:r:sqm.execfile
+/etc/modules-boot\.d	-d	u:r:kmodloader.conffile
+/etc/odhcp6c\.user\.d	-d	u:r:odhcp6c.conffile
+/etc/squid/ssl_cert	-d	u:r:squid.certfile
+/overlay/lost\+found	-d	u:r:lostfound.miscfile
+/tmp/run/irqbalance	-d	u:r:irqbalance.runtimetmpfile
+/usr/share/terminfo	-d	u:r:terminfo.datafile
+/usr/share/zoneinfo	-d	u:r:locale.miscfile
+/dev/mapper/control	-c	u:r:dmctl.nodedev
+/etc/banner\.failsafe	--	u:r:banner.conffile
+/etc/init\.d/dropbear	--	u:r:rcdropbear.initscriptfile
+/etc/init\.d/firewall	--	u:r:rcfirewall.initscriptfile
+/etc/init\.d/ucitrack	--	u:r:rcucitrack.initscriptfile
+/etc/openwrt_release	--	u:r:osrelease.miscfile
+/etc/openwrt_version	--	u:r:osrelease.miscfile
+/etc/sysupgrade\.conf	--	u:r:sysupgrade.conffile
+/etc/umurmur\.banfile	--	u:r:murmur.banfile.conffile
+/tmp/etc/chrony\.conf	--	u:r:chrony.conftmpfile
+/tmp/resolv\.conf\.ppp	--	u:r:resolv.tmpfile
+/tmp/run/unbound\.pid	--	u:r:unbound.runtimetmpfile
+/usr/bin/fw_printenv	--	u:r:fwenv.execfile
+/usr/bin/luci-reload	--	u:r:luci.reload.execfile
+/usr/bin/udevtrigger	--	u:r:udevtrigger.execfile
+/usr/lib/sftp-server	--	u:r:sftpserver.execfile
+/usr/lib/squid/diskd	--	u:r:squid.helper.execfile
+/etc/ngircd/keyfiles	-d	u:r:ngircd.keyfiles.conffile
+/tmp/run/chrony-dhcp	-d	u:r:chrony.runtimetmpfile
+/usr/share/libiwinfo	-d	u:r:libiwinfo.datafile
+/usr/share/tinyproxy	-d	u:r:tinyproxy.datafile
+/dev/cpu_dma_latency	-c	u:r:qos.nodedev
+/dev/network_latency	-c	u:r:qos.nodedev
+/etc/init\.d/bootcount	--	u:r:rcbootcount.initscriptfile
+/etc/init\.d/igmpproxy	--	u:r:rcigmpproxy.initscriptfile
+/etc/init\.d/tinyproxy	--	u:r:rctinyproxy.initscriptfile
+/tmp/etc/dnsmasq\.conf	--	u:r:dnsmasq.conftmpfile
+/tmp/log/umurmurd\.log	--	u:r:murmur.logtmpfile
+/tmp/resolv\.conf\.auto	--	u:r:resolv.tmpfile
+/tmp/run/luci-bwc\.pid	--	u:r:luci.bwc.runtimetmpfile
+/tmp/run/umurmurd\.pid	--	u:r:murmur.runtimetmpfile
+/tmp/run/xtables\.lock	--	u:r:xtables.runtimetmpfile
+/tmp/state/dnsmasqsec	--	u:r:dnsmasq.statetmpfile
+/usr/bin/board_detect	--	u:r:boarddetect.execfile
+/usr/bin/hotplug-call	--	u:r:hotplugcall.execfile
+/usr/bin/ntpd-hotplug	--	u:r:ntpdhotplug.execfile
+/usr/bin/ubiupdatevol	--	u:r:ubiutil.execfile
+/usr/bin/urandom_seed	--	u:r:urandomseed.execfile
+/usr/lib/acme/acme\.sh	--	u:r:acme.execfile
+/usr/lib/functions\.sh	--	u:r:functions.miscfile
+/usr/lib/sqm/stop-sqm	--	u:r:sqm.execfile
+/tmp/luci-modulecache	-d	u:r:luci.tmpfile
+/tmp/run/config\.check	-d	u:r:reloadconfig.runtimetmpfile
+/dev/memory_bandwidth	-c	u:r:qos.nodedev
+/etc/init\.d/irqbalance	--	u:r:rcirqbalance.initscriptfile
+/etc/init\.d/sysfixtime	--	u:r:rcsysfixtime.initscriptfile
+/tmp/log/tinyproxy\.log	--	u:r:tinyproxy.logtmpfile
+/usr/bin/acme_setup\.sh	--	u:r:acme.execfile
+/usr/bin/luci-peeraddr	--	u:r:luci.peeraddr.execfile
+/usr/bin/odhcpd-update	--	u:r:odhcpd.update.execfile
+/usr/bin/reload_config	--	u:r:reloadconfig.execfile
+/usr/bin/uclient-fetch	--	u:r:newwget.execfile
+/usr/bin/validate_data	--	u:r:validatedata.execfile
+/usr/lib/acme/run-acme	--	u:r:acme.execfile
+/usr/lib/sqm/start-sqm	--	u:r:sqm.execfile
+/etc/init\.d/gpio_switch	--	u:r:rcgpioswitch.initscriptfile
+/tmp/etc/igmpproxy\.conf	--	u:r:igmpproxy.conftmpfile
+/tmp/etc/tinyproxy\.conf	--	u:r:tinyproxy.conftmpfile
+/tmp/run/wpa_supplicant	-d	u:r:wpad.runtimetmpfile
+/dev/network_throughput	-c	u:r:qos.nodedev
+/etc/init\.d/urandom_seed	--	u:r:rcurandomseed.initscriptfile
+/tmp/unbound_odhcpd\.lock	--	u:r:unbound.tmpfile
+/usr/bin/acme_cleanup\.sh	--	u:r:acme.execfile
+/usr/bin/config_generate	--	u:r:configgenerate.execfile
+/usr/bin/unbound-control	--	u:r:unbound.control.execfile
+/etc/hotplug-preinit\.json	--	u:r:hotplug.conffile
+/tmp/sysupgrade\.conffiles	--	u:r:sysupgrade.tmpfile
+/usr/lib/squid/helper-mux	--	u:r:squid.helper.execfile
+/usr/lib/uboot-envtools\.sh	--	u:r:fwenv.miscfile
+/usr/lib/unbound/odhcpd\.sh	--	u:r:unbound.odhcpd.execfile
+/usr/bin/wireguard_watchdog	--	u:r:wireguard.watchdog.execfile
+/usr/lib/squid/cachemgr\.cgi	--	u:r:squid.helper.execfile
+/usr/bin/rpcd/luci\.wireguard	--	u:r:luci.execfile
+/usr/lib/squid/log_db_daemon	--	u:r:squid.helper.execfile
+/usr/bin/xtables-legacy-multi	--	u:r:xtables.execfile
+/usr/lib/squid/log_file_daemon	--	u:r:squid.helper.execfile
+/usr/lib/squid/url_lfs_rewrite	--	u:r:squid.helper.execfile
+/usr/lib/squid/url_fake_rewrite	--	u:r:squid.helper.execfile
+/usr/lib/squid/url_fake_rewrite\.sh	--	u:r:squid.helper.execfile
+/usr/lib/squid/storeid_file_rewrite	--	u:r:squid.helper.execfile
+/usr/lib/sqm/update-available-qdiscs	--	u:r:sqm.execfile
+/usr/lib/squid/security_file_certgen	--	u:r:squid.sslcrtd.execfile
+/usr/lib/squid/security_fake_certverify	--	u:r:squid.helper.execfile
